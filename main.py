@@ -1,6 +1,7 @@
 import numpy as np
 import plotly.graph_objects as go
 import plotly.io as pio
+import chart_studio
 # Create a slider using for
 x = np.arange ( 5 )
 y0 = x + 0
@@ -46,3 +47,14 @@ layout = go.Layout (
 # display the graph
 fig = go.Figure ( data =plot, layout=layout )
 fig. show ()
+
+
+username = 'letriet' # your username
+api_key = 'ZZ2na5xwvHSR6VA5sMsc' # your api key - go to profile > settings > regenerate key
+chart_studio.tools.set_credentials_file(username=username, api_key=api_key)
+
+import chart_studio.plotly as py
+py.plot(fig, filename = 'linear_graph_slider', auto_open=True)
+
+import plotly.io as pio
+pio.write_html(fig, file=’index.html’, auto_open=True)
