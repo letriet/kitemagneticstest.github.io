@@ -2,6 +2,7 @@ import numpy as np
 import plotly.graph_objects as go
 import plotly.io as pio
 import chart_studio
+import chart_studio.tools as tls
 # Create a slider using for
 x = np.arange ( 5 )
 y0 = x + 0
@@ -58,3 +59,6 @@ py.plot(fig, filename = 'linear_graph_slider', auto_open=True)
 
 
 pio.write_html(fig, file='index.html', auto_open=True)
+
+
+tls.get_embed('https://chart-studio.plotly.com/~letriet/1') #change to your url
