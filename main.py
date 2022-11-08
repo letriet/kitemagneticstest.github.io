@@ -56,5 +56,5 @@ chart_studio.tools.set_credentials_file(username=username, api_key=api_key)
 import chart_studio.plotly as py
 py.plot(fig, filename = 'linear_graph_slider', auto_open=True)
 
-import plotly.io as pio
-pio.write_html(fig, file=’index.html’, auto_open=True)
+
+pio.write_html(fig, file='index.html', auto_open=True)
